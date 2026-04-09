@@ -1,7 +1,9 @@
 // ============================================================
 // tasks.js — CRUD công việc: thêm, sửa, xóa, modal danh sách
-// ============================================================..
-
+// ===============================================================..
+// Feature: Task CRUD implementation
+// Added create, update, delete functions
+// Demo for report
 import { state } from './state.js';
 import { PRIORITIES, STATUSES, STATUS_COLORS } from './config.js';
 import { formatDate, stringToColor, escapeHtml } from './utils.js';
