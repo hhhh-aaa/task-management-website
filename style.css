@@ -1,0 +1,70 @@
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #f4f7fa;
+}
+.glass-effect {
+    background: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.sidebar-item.active {
+    background-color: #4f46e5;
+    color: white;
+}
+.sidebar-item.active svg {
+    color: white;
+}
+.donut-chart { position: relative; width: 80px; height: 80px; border-radius: 50%; background: conic-gradient(#4ade80 var(--progress, 0%), #e5e7eb 0); display: flex; justify-content: center; align-items: center; transition: background 0.5s ease-in-out; }
+.donut-chart::before { content: ''; position: absolute; width: 64px; height: 64px; background: rgba(255,255,255,0.7); border-radius: 50%; }
+.chart-text { position: relative; z-index: 1; font-size: 1.25rem; font-weight: 600; color: #374151; }
+.task-list::-webkit-scrollbar, .modal-body::-webkit-scrollbar, .kanban-tasks::-webkit-scrollbar, .month-day-tasks::-webkit-scrollbar, #list-view-container::-webkit-scrollbar, #reports-view-container::-webkit-scrollbar { width: 6px; }
+.task-list::-webkit-scrollbar-track, .modal-body::-webkit-scrollbar-track, .kanban-tasks::-webkit-scrollbar-track, .month-day-tasks::-webkit-scrollbar-track, #list-view-container::-webkit-scrollbar-track, #reports-view-container::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.task-list::-webkit-scrollbar-thumb, .modal-body::-webkit-scrollbar-thumb, .kanban-tasks::-webkit-scrollbar-thumb, .month-day-tasks::-webkit-scrollbar-thumb, #list-view-container::-webkit-scrollbar-thumb, #reports-view-container::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+.modal-backdrop { background-color: rgba(0,0,0,0.5); }
+.calendar-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.calendar-day { text-align: center; }
+.current-day { background-color: #4f46e5; color: white; border-radius: 50%; font-weight: bold; }
+.week-highlight { background-color: #e0e7ff; }
+.task-tag { font-size: 0.7rem; padding: 0.1rem 0.5rem; border-radius: 9999px; font-weight: 500; }
+.kanban-task { cursor: grab; }
+.kanban-task:active { cursor: grabbing; }
+.ghost-class { opacity: 0.4; background: #c7d2fe; border-radius: 0.5rem; }
+.month-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.month-day { 
+    border: 1px solid rgba(0,0,0,0.05); 
+    height: 150px;
+    min-width: 0;
+}
+.month-day.other-month { background-color: #f9fafb; color: #9ca3af; }
+.month-day-tasks {
+    flex: 1 1 0;
+    overflow-y: auto;
+}
+.month-task-item {
+    white-space: normal;
+    word-break: break-word;
+    align-items: flex-start;
+}
+.avatar { width: 20px; height: 20px; border-radius: 50%; background-color: #e0e7ff; color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: bold; flex-shrink: 0;}
+.task-item-clickable { cursor: pointer; transition: background-color 0.2s; }
+.task-item-clickable:hover { background-color: rgba(0,0,0,0.05); }
+.status-badge { padding: 2px 8px; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; white-space: nowrap; }
+.sortable-header { cursor: pointer; user-select: none; }
+.sortable-header:hover { color: #4f46e5; }
+.sort-icon { display: inline-block; width: 1em; height: 1em; margin-left: 4px; opacity: 0.4; transition: opacity 0.2s; }
+.sortable-header.sorted .sort-icon { opacity: 1; }
+.btn-active {
+    background-color: #4f46e5;
+    color: white;
+    font-weight: 600;
+}
+.btn {
+    transition: all 0.2s ease-in-out;
+    background-color: #f3f4f6;
+    color: #374151;
+}
+.btn:hover {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
